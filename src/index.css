@@ -1,0 +1,49 @@
+#menu-label{
+    color: white;
+    position: absolute;
+    left: 20px;
+    display: none;
+}
+#side-menu{
+    display: none;
+}
+#responsive-nav{
+    display: inline;
+    position: relative;
+}
+#responsive-nav a{
+    color: white;
+    padding: 10px;
+    font-family: sans-serif;
+}
+@media screen and (max-width: 780px) {
+    #menu-label{
+      display: inline;
+      z-index: 100;
+      position: absolute;
+      top: 10px;
+      transform: rotate(90deg);
+    }
+    #responsive-nav{
+      padding: 20px;
+      display: block;
+      width: fit-content;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      box-shadow: 3px 3px 3px #333;
+      display: none;
+    }    
+    #responsive-nav a{
+        display: block;
+        text-align: left;
+        width: fit-content;
+        padding-left: 40px;
+    }
+    #side-menu:checked ~ #responsive-nav{
+      display: block;
+    }
+    #side-menu:checked ~ #menu-label{
+      transform: rotate(0deg);
+    }
+}
